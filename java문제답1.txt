@@ -1,0 +1,38 @@
+자바 문제 1. 답 2
+2. false
+   true
+3. p1과 p2는 다른 객체이므로 주소값이 다르다. 하지만 p3은 p1의 주소값을 참
+조하도록 되어있으므로 동일한 객체이다.
+그러므로 출력값은 false, true이다.
+
+4.
+toString(){
+	name="홍길동"
+	age=20
+	System.out.println("이름:"+name+",나이:"+age)
+}
+5. 2
+6. for(int i=0;count;i++){
+	if (i == 0){result = 1}else{result = 2i*2 }
+	
+	return result
+}
+
+}
+7. b결과 -127 이유 byte의 표현범위가 -127~127이다.
+8. 변수 x의 스코프가 if문 안에 한정된다.
+9.
+
+switch(grade%10)
+case: 9
+	System.out.println("A학점");
+	break;
+case:8
+	System.out.println("B학점");
+	break;
+case:7
+	System.out.println("C학점");
+	break;
+Default
+	System.out.println("F학점");
+	break;
