@@ -1,0 +1,37 @@
+0716 상속 - 클래스의 재사용. 다형성(OOP 특징) 구현 방법
+
+객체의 구성 요소를 부모클래스가 자식클래스에게 상속.
+
+1) 속성
+2) 메소드
+3) 생성자
+
+상속받는 요소는 private 제외. public, default, protected 접근 제어요소만
+상속받습니다.
+
+※ super 키워드:부모 객체
+자식 객체를 new 연산으로 생성할 때
+=> 상속을 받기 위해 부모 객체 생성 후에 자식이 갖는 추가적인 요소와 재정의 메소드
+들이 자식 객체에 반영
+
+--------------
+
+
+*도형으로 그림 게임 만들기 (예시) 도형 객체 필요.
+부모 클래스 : 도형의 공통점을 찾아서 Shape 정의
+	-속성 : posX,posY, width, height,color,id
+	-기능 : move(offsetX,offsetY), resize(offsetW,offsetH)
+	          color(String color)
+		calcArea() 넓이 리턴 
+		draw() : 속성값을 출력하기
+		getter만 만드세요.
+		기본 생성자 :공유count++ 후에 id 값으로 대입하기
+			color 기본값은 "black"
+		커스텀 생성자 : 기본생성자 초기화와 posX, posY, width, height 초기화
+
+
+자식클래스 정의: 사각형(Rectangle),삼각형 (Triangle), 원(Circle)
+	-재정의 메소드 calcArea(),draw()
+
+사각형, 삼각형, 원,
+자식클래스로 정의
