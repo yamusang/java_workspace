@@ -1,3 +1,5 @@
+package day05;
+
 public class B29StringArray {
     public static void main(String[] args) {
         String[] names = new String[3];
