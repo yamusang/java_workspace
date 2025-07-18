@@ -28,6 +28,7 @@ class Bird implements Flyable {
 
 public class Test {
     public static void main(String[] args) {
+	//익명 클래스로 인터페이스 구현. 익명클래스로 객체 생성
         Flyable bird = new Flyable(){
         };
         bird.fly();
@@ -137,7 +138,7 @@ class Person implements Cloneable {
 }
 ① Cloneable은 마커 인터페이스이다
 ② clone() 메서드는 Object 클래스에 정의되어 있다
-③ Cloneable을 구현하지 않으면 CloneNotSupportedException이 발생한다
+③ implements Cloneable을 명시하지 않으면 CloneNotSupportedException이 발생한다
 ④ clone() 메서드는 깊은 복사를 자동으로 수행한다
 ⑤ clone() 메서드는 protected로 선언되어 있으며 public 으로 접근 방식을 변경할 수 있다.
 
@@ -170,16 +171,19 @@ protected 접근 권한을 public 으로 변경할 수 있다.
 5.4
 6.class 앞에 abstract를 붙여준다.
 틀림 void 앞에도 abstract 붙여야함
-7.default
+7.default - 반드시 재정의 하지 않아도 되는 메소드(일반적인 접근권한 default와는 다른 의미이다.)
 8.default String name;    틀림 void read();
   Writable
-9.3
-10.5    틀림 4
-11.(int)this.price-other.price
+9.3   ✅참고: 래퍼클래스에 두 값 비교를 하는 static 메소드가 있습니다. -> compare
+10.5    틀림 4 ✅참고 : 인터페이스 내부에 상수도, 메소드도 없는 인터페이스를 마커인터페이스라고 함
+11.(int)(this.price-other.price) 
 12.깊은 복사 : 객체를 또 하나 생성하는 것. 
-얕은 복사: 주소값만 복사
+얕은 복사: 주소값만 복사 ->일반적인 clone의 동작
+
+
+
 13. o
-o 틀림 x
+o 틀림 x - 다른 패키지
 o
 14. x   틀림  o
      o   틀림 x
