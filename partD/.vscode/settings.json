@@ -3,6 +3,7 @@
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
-        "c:\\Class250615\\lib\\lombok.jar"
+        "c:\\Class250615\\lib\\lombok.jar",
+        "c:\\Class250616\\lib\\lombok.jar"
     ]
 }
