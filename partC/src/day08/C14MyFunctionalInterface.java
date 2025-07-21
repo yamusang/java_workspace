@@ -50,9 +50,11 @@ public class C14MyFunctionalInterface {
  * 자바에는
  * 
  */
-
+@FunctionalInterface
 interface ITestA {
     void testa(String message); // 인자O,리턴X : Consumer(소비자)
+
+    // void testXXX(); // 오류: why? @FunctionalInterface 함수형 인터페이스에만 표시
 }
 
 interface ITestB {

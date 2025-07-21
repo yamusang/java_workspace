@@ -93,8 +93,9 @@ class Product implements Comparable<Product>, Cloneable {
 
     public int compareTo(Product other) {
         // Product 객체 비교는 '가격'으로 한다.
-        // return (int) (this.price - other.price); // 1안
-        return Double.compare(this.price, other.price);// 2안
+        return (int) (this.price - other.price); // 1안 강제로 인트로 변환하여 0으로 계산되는 값이 여러개
+        // 있을 시 같은 값 처리 됨. 소수점 이하 자리 비교와 정확한 정렬 못함    
+        // return Double.compare(this.price, other.price);// 2안
         // return this.price.compareTo(other.price); //3안 단,private Double price;로 변경해야함
     }
 
