@@ -7,4 +7,39 @@
 
 -List는 배열과 유사
  Set은 수학 집합의 개념
- Map은 Key 를 이용해서 데이터 접근
+ Map은 Key 를 이용해서 데이터(value) 접근
+
+-Map은 List<E> 또는 Set<E>과 성격이 다릅니다. 제너릭 타입이 2개 필요.
+
+Map<K,V> : Key 값으로 Value 를 가져오기. key와 value는 모든 타입 Object입니다.
+
+*'key'는 중복된 값을 가질 수 없습니다. Set콜렉션의 특징과 같습니다.
+key와 value 모두 순서가 없습니다. key를 이용하여 데이터 접근
+
+* Map 에는 내부 클래스 Entry 가 있고 key, value 한쌍을 저장하는 단위입니다.
+  내부클래스는 클래스 안에 정의된 클래스
+
+*맵에 입력한 순서대로 접근해야 한다면 LinkedHashMap
+또는 정렬(Key 기준) 된 방식으로 접근해야 한다면 TreeMap
+
+
+-Map은 논리적인 표로 만들 수 있습니다.
+
+	key	value
+	t1	나나
+	t2	모모
+	t3	나연
+	t4	다현
+
+
+* key를 모아서 만든 자료구조는 keyset
+* key와 value를 한 쌍으로 묶으면 entry
+* 모든 entry를 모아서 만든 자료구조는 entryset
+
+- map의 메소드 -
+put("키","값")
+get(키)
+values()
+keySet()
+entrySet()
+containsKey("값") : 인자의 값이 keySet에 포함?
